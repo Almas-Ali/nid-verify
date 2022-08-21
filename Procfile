@@ -1,1 +1,1 @@
-web: gunicorn passenger_wsgi:app
+web: gunicorn passenger_wsgi:application
