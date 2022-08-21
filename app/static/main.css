@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+}
+
+.card {
+    width: 800px;
+    max-width: 90%;
+    margin: auto;
+    padding: 30px;
+}
+
+.nid-data button {
+    display: none;
+}
+
+footer {
+    background-color: #23ebb5;
+    padding: 8px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@media print {
+    .on-print {
+        display: none !important;
+    }
+
+    @page {
+        size: A4 portrait;
+        margin: 0.5in;
+    }
+
+    footer {
+        border-radius: 12px;
+    }
+
+}

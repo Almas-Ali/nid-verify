@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}NID Verify {% endblock %}
+{% block content %}
+<div class="container">
+    <h1 align="center" class="mt-5 mb-2">NID Verification System</h1>
+    <div class="mt-2 card">
+        <form action="/nid" method="POST">
+            <div class="form-group mt-2">
+                <label for="nid">NID Number</label>
+                <input type="number" name="nid" placeholder="NID" class="form-control">
+            </div>
+            <div class="form-group mt-2">
+                <label for="dob">Date of birth</label>
+                <input type="date" name="dob" class="form-control">
+            </div>
+            <button class="btn btn-primary mt-2" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
