@@ -12,7 +12,7 @@ class BaseModel(Model):
 
 class NID(BaseModel):
     id = PrimaryKeyField()
-    nid = IntegerField()
+    nid = CharField(max_length=20)
     dob = DateField()
     date = DateTimeField(default=dt.now())
 
