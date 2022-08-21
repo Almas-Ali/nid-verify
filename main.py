@@ -23,11 +23,16 @@ def nid_data():
         res = requests.post('https://ldtax.gov.bd/citizen/nidCheck/', data = req_data, verify=False)
         a = res.json()
         data = a['data']
-        
-        NID.create(nid=req_data['nid'], dob=req_data['dob'])
+        if a['success'] == 'true':
+            NID.create(nid=req_data['nid'], dob=req_data['dob'])
             
         return render_template("render_nid_data.html", data = data)
      
+
+@app.route('/list-all')
+def list_all():
+    list = NID.select().dicts().order_by(NID.date.desc())
+    return render_template('all_nids.html', list = list)
 
 if __name__ == '__main__':
     app.run(debug=False)

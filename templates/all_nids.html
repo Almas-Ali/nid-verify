@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}All NIDs{% endblock %}
+{% block content %}
+
+<div class="container">
+
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>NID</th>
+            <th>DOB</th>
+            <th>DATE</th>
+        </tr>
+        {% for l in list %}
+        <tr>
+            <td>{{ l.id }}</td>
+            <td>{{ l.nid }}</td>
+            <td>{{ l.dob }}</td>
+            <td>{{ l.date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+
+{% endblock %}
