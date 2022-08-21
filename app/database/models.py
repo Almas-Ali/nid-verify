@@ -3,8 +3,7 @@ from datetime import datetime as dt
 
 
 # db = SqliteDatabase('nid.db')
-db = PostgresqlDatabase('my_app', user='postgres', password='secret',
-                           host='10.1.0.9', port=5432)
+db = PostgresqlDatabase('df4u2hod95hlv0', user='xxzhjdzfhkzcff', password='e0ccef1e059f71975c415a7a5ec8031d074c3ffe6f3d0f6d3f8bdd52b34fbeab', host='ec2-44-206-137-96.compute-1.amazonaws.com', port=5432)
 
 class BaseModel(Model):
     class Meta:
